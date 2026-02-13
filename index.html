@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Day Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <span class="sub-title">D-DAY COUNTER</span>
+            <h1 id="main-title">Product Launch Countdown</h1>
+        </header>
+
+        <main>
+            <div class="input-bar">
+                <div class="input-group">
+                    <span class="icon">✏️</span>
+                    <input type="text" id="event-name" placeholder="Event Name" autocomplete="off">
+                </div>
+                <div class="divider"></div>
+                <div class="input-group">
+                    <span class="icon">📅</span>
+                    <input type="datetime-local" id="target-date">
+                </div>
+                <button id="set-btn">SET <span class="arrow">→</span></button>
+            </div>
+
+            <div id="countdown">
+                <div class="card">
+                    <div class="card-inner">
+                        <span id="days">0</span>
+                        <span class="label">DAYS</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <span id="hours">00</span>
+                        <span class="label">HOURS</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <span id="minutes">00</span>
+                        <span class="label">MINUTES</span>
+                    </div>
+                </div>
+                <div class="card active">
+                    <div class="top-bar"></div>
+                    <div class="card-inner">
+                        <span id="seconds">00</span>
+                        <span class="label">SECONDS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="message" class="hidden"></div>
+
+            <p class="quote">“Small progress is still progress.”</p>
+        </main>
+    </div>
+
+    <div class="floating-menu">
+        <button class="menu-btn" id="bg-toggle" aria-label="배경 변경">🖼️</button>
+        <button class="menu-btn" id="theme-toggle" aria-label="다크 모드">🌙</button>
+        <button class="menu-btn" id="settings-btn" aria-label="설정">⚙️</button>
+    </div>
+
+    <canvas id="confetti"></canvas>
+    <script src="script.js"></script>
+</body>
+
+</html>
