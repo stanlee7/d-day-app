@@ -31,7 +31,7 @@ function loadData() {
 
     if (savedEventName) {
         eventNameInput.value = savedEventName;
-        mainTitle.textContent = savedEventName + " Countdown";
+        mainTitle.textContent = savedEventName + " D-Day";
     }
 
     if (savedTargetDate) targetDateInput.value = savedTargetDate;
@@ -59,7 +59,7 @@ function handleSet() {
     localStorage.setItem('dday-event-name', name);
     localStorage.setItem('dday-target-date', date);
 
-    mainTitle.textContent = name + " Countdown";
+    mainTitle.textContent = name + " D-Day";
     startCountdown();
 }
 
@@ -93,7 +93,7 @@ function updateCounter() {
     if (distance < 0) {
         clearInterval(countdownInterval);
         // countdownEl.classList.add('hidden'); // Keep visible or dim? Let's keep visible but show message
-        messageEl.textContent = `🎉 ${eventNameInput.value || 'D-Day'} Arrived! 🎉`;
+        messageEl.textContent = `🎉 ${eventNameInput.value || 'D-Day'} 도착! 🎉`;
         messageEl.classList.remove('hidden');
         startConfetti();
         return;
